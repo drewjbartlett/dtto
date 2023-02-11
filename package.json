@@ -5,12 +5,14 @@
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
+  "umd:main": "dist/foo.umd.js",
   "typings": "dist/index.d.ts",
   "exports": {
+    "types": "./dist/index.d.ts",
     "require": "./dist/dtto.cjs",
     "default": "./dist/dtto.modern.js"
   },
-  "module": "./dist/dtto.module.js",
+  "module": "./dist/dtto.module.mjs",
   "unpkg": "./dist/dtto.umd.js",
   "scripts": {
     "test": "jest",
