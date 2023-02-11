@@ -19,8 +19,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": false,
-    "types": ["@types/jest", "@types/node"],
-    "paths": {}
+    "types": ["@types/jest", "@types/node"]
   },
   "include": ["*.ts"],
   "exclude": ["node_modules"]
