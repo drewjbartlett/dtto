@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "path": "/path/to/item",
+  "user": {
+    "id": 1,
+    "username": "drew"
+  },
+  "comments": []
+}

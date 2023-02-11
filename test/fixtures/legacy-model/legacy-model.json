@@ -1,0 +1,43 @@
+{
+  "id": 1234,
+  "a_long_key": "some-long-key-name",
+  "longer_key_name_with_relationship": {
+    "id": 1,
+    "username": "drew"
+  },
+  "even_longer_key_name_with_mapped_relationship": [
+    {
+      "id": 1234,
+      "comment": null,
+      "content": "nice!",
+      "user": {
+        "id": 1,
+        "username": "drew"
+      }
+    },
+    {
+      "id": 1234,
+      "content": "nice!",
+      "user": {
+        "id": 1,
+        "username": "drew"
+      }
+    },
+    {
+      "id": 1234,
+      "comment": {
+        "id": 1234,
+        "content": "nice!",
+        "user": {
+          "id": 1,
+          "username": "drew"
+        }
+      },
+      "content": "nice!",
+      "user": {
+        "id": 1,
+        "username": "drew"
+      }
+    }
+  ]
+}

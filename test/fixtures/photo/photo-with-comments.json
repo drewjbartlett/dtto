@@ -1,0 +1,44 @@
+{
+  "id": 1,
+  "path": "/path/to/item",
+  "user": {
+    "id": 1,
+    "username": "drew"
+  },
+  "comments": [
+    {
+      "id": 1,
+      "parent": {
+        "id": 1,
+        "parent": {
+          "id": 1,
+          "parent": {},
+          "content": "hello, there.",
+          "user": {
+            "id": 1,
+            "username": "drew"
+          }
+        },
+        "content": "how are you?",
+        "user": {
+          "id": 1,
+          "username": "cam"
+        }
+      },
+      "content": "I am well, thanks!",
+      "user": {
+        "id": 1,
+        "username": "cam"
+      }
+    },
+    {
+      "id": 2,
+      "parent": null,
+      "content": "I am well, thanks!",
+      "user": {
+        "id": 1,
+        "username": "cam"
+      }
+    }
+  ]
+}
