@@ -1,23 +1,23 @@
 {
   "name": "dtto",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
-  "umd:main": "dist/foo.umd.js",
+  "umd:main": "dist/index.umd.js",
   "typings": "dist/index.d.ts",
   "exports": {
     "types": "./dist/index.d.ts",
-    "require": "./dist/dtto.cjs",
-    "default": "./dist/dtto.modern.js"
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
   },
-  "module": "./dist/dtto.module.mjs",
-  "unpkg": "./dist/dtto.umd.js",
+  "module": "./dist/index.js",
+  "unpkg": "./dist/index.umd.js",
   "scripts": {
     "test": "jest",
     "build": "microbundle",
-    "release": "rm -rf dist/ && build",
+    "release": "rm -rf dist/ && npm run build",
     "prettier": "prettier './src/**/*.ts' --write"
   },
   "author": "drewjbartlett",
