@@ -31,6 +31,9 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "ts-jest": "^29.0.3",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "repository": "git+https://github.com/drewjbartlett/dtto.git",
+    "bugs": "https://github.com/drewjbartlett/dtto/issues",
+    "homepage": "https://github.com/drewjbartlett/dtto#readme"
   }
 }
