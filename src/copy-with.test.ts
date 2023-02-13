@@ -1,6 +1,7 @@
 import { House } from '../test/house';
 import { Person } from '../test/person';
 import { copyWith } from './copy-with';
+import { fromJson } from './from-json';
 
 describe('copyWith', () => {
   it('should copy an instance of a model with new values', () => {
@@ -26,5 +27,12 @@ describe('copyWith', () => {
       owner: { firstName: 'Tom', lastName: 'Jones', age: 65, fullName: 'Tom Jones' },
     });
     expect(house2.owner).toBeInstanceOf(Person);
+  });
+
+  it('should work on a frozen object', () => {
+    const tom = fromJson(Person, { firstName: 'Tom', lastName: 'Jones', age: 65 });
+    const tom2 = copyWith(tom, { firstName: 'Thomas' });
+
+    expect(tom2).toMatchObject({ firstName: 'Thomas', lastName: 'Jones', age: 65, fullName: 'Thomas Jones' });
   });
 });

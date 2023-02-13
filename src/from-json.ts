@@ -1,11 +1,13 @@
-import { createTransformAPI, JsonResponse, Type } from '.';
+import { createTransformAPI } from './transform-api';
 import { getTransform } from './transform-map';
+import { JsonResponse, Type } from './types';
+import { deepFreeze } from './utils/deep-freeze';
 import { isNullOrUndefined } from './utils/is-null-or-undefined';
 
 /**
  * Parse the passed json response into a the given model.
  */
-export function fromJson<T>(KlassName: Type<T>, json: JsonResponse): T {
+export function fromJson<T extends Record<string, any>>(KlassName: Type<T>, json: JsonResponse): Readonly<T> {
   const instance = new KlassName() as T;
   const propertyKeys = Object.getOwnPropertyNames(instance);
   const transformer = getTransform(KlassName);
@@ -22,9 +24,8 @@ export function fromJson<T>(KlassName: Type<T>, json: JsonResponse): T {
 
     Object.defineProperty(instance, k, {
       value,
-      writable: true,
     });
   });
 
-  return instance as T;
+  return deepFreeze(instance);
 }

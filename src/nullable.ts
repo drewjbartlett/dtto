@@ -1,9 +1,10 @@
 import { Mutable, OptionalObject, Type, WritablePart } from './types';
 
 /**
- * Create an instance of a model with all null keys.
+ * Create an instance of a model with all null keys
+ * except for the values passed.
  */
-export function mutable<T, Values extends OptionalObject<WritablePart<T>>>(
+export function nullable<T, Values extends OptionalObject<WritablePart<T>>>(
   KlassName: Type<T>,
   values?: Values,
 ): Mutable<T> {

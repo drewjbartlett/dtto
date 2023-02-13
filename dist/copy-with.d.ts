@@ -1,2 +1,2 @@
 import { OptionalObject, WritablePart } from './types';
-export declare function copyWith<T>(model: T, values: OptionalObject<WritablePart<T>>): T;
+export declare function copyWith<T extends Record<string, any>>(model: T, values: OptionalObject<WritablePart<T>>): Readonly<T>;
